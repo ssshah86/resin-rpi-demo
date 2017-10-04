@@ -17,6 +17,4 @@ RUN apt-get update && apt-get install -yq \
 # Copy all our source
 COPY src /usr/src/app
 
-CMD modprobe i2c-dev
-
-CMD ["bash", "/usr/src/app/start.sh"]
+CMD modprobe i2c-dev && bash start.sh
